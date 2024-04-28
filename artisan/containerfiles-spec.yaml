@@ -1,0 +1,64 @@
+---
+containerfiles:
+- path: "toolbox/Containerfile.tools"
+  transient: true
+  tags:
+  - "quay.io/zzlotnik/toolbox:tools-fedora-39"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "39"
+- path: "toolbox/Containerfile.tools"
+  transient: true
+  tags:
+  - "quay.io/zzlotnik/toolbox:tools-fedora-40"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "40"
+- path: "toolbox/Containerfile.base"
+  tags:
+  - "quay.io/zzlotnik/toolbox:base-fedora-39"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "39"
+- path: "toolbox/Containerfile.base"
+  tags:
+  - "quay.io/zzlotnik/toolbox:base-fedora-40"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "40"
+- path: "toolbox/Containerfile.kube"
+  tags:
+  - "quay.io/zzlotnik/toolbox:kube-fedora-39"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "39"
+- path: "toolbox/Containerfile.kube"
+  tags:
+  - "quay.io/zzlotnik/toolbox:kube-fedora-40"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "40"
+- path: "ocp-ssh-debug/Containerfile"
+  tags:
+  - "quay.io/zzlotnik/testing:ssh-debug-pod"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "40"
+- path: "fedora-coreos/Containerfile"
+  tags:
+  - "quay.io/zzlotnik/os-images:fedora-coreos"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "40"
+- path: "fedora-silverblue/Containerfile"
+  tags:
+  - "quay.io/zzlotnik/os-images:fedora-silverblue-39"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "39"
+- path: "fedora-silverblue/Containerfile"
+  tags:
+  - "quay.io/zzlotnik/os-images:fedora-silverblue-40"
+  buildArgs:
+  - name: FEDORA_VERSION
+    value: "40"
